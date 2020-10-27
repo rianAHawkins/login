@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/rlPlayer"
+    android:background="@drawable/bridge">
+
+    <Switch
+        android:text="Art/Songs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/ivCover"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="65dp"
+        android:id="@+id/svPicList"
+        android:textColor="@android:color/background_light"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ibtnBack"
+        android:layout_marginTop="100dp"
+        android:id="@+id/ivCover"
+        android:layout_alignStart="@+id/ibtnBack"
+        android:layout_alignEnd="@+id/swRepeat"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignTop="@+id/ivCover"
+        android:layout_alignStart="@+id/ivCover"
+        android:id="@+id/lvSongs"
+        android:visibility="invisible"
+        android:textColor="@android:color/background_light"/>/>
+
+    <TextView
+        android:text="Song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/tvSongName"
+        android:layout_above="@+id/tvCurrentTime"
+        android:layout_alignStart="@+id/tvCurrentTime"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sbMediaMoment"
+        android:layout_alignStart="@+id/sbMediaMoment"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/tvCurrentTime"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCurrentTime"
+        android:layout_alignEnd="@+id/sbMediaMoment"
+        android:id="@+id/tvDuration"
+        android:textColor="@android:color/background_light" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ibtnBack"
+        android:layout_alignStart="@+id/ibtnBack"
+        android:layout_marginBottom="9dp"
+        android:id="@+id/sbMediaMoment"
+        android:layout_alignEnd="@+id/swRepeat" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_rew"
+        android:id="@+id/ibtnBack"
+        android:layout_marginStart="20dp"
+        android:layout_alignTop="@+id/ibtnPlay"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_marginBottom="70dp"
+        android:id="@+id/ibtnPlay"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/ibtnBack"
+        android:layout_marginStart="30dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_ff"
+        android:id="@+id/ibtnForward"
+        android:layout_alignTop="@+id/ibtnPlay"
+        android:layout_toEndOf="@+id/ibtnPlay"
+        android:layout_marginStart="30dp" />
+
+    <Switch
+        android:text="Σ   "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swRepeat"
+        android:splitTrack="false"
+        android:checked="false"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sbMediaMoment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
